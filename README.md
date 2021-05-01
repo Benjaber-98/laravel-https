@@ -38,7 +38,7 @@ FORCE_HTTPS_IN_LOCAL=true
 ### Usage
 
 ##### Basic Usage:
-* Add `Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class` to your Kernel file like this:
+* Add `\Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class` to your Kernel file like this:
 
 ```php
 // app/Http/Kernel.php
@@ -48,7 +48,7 @@ FORCE_HTTPS_IN_LOCAL=true
 //use it globally for all requests
 protected $middleware = [
      ...
-    Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
+    \Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
 ];
     
 ...
@@ -57,14 +57,14 @@ protected $middleware = [
 protected $middlewareGroups = [
    'web' => [
        ...
-       Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
+       \Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
    ],
 
 ...
 //Or register it to use in routes
 protected $routeMiddleware = [
    ...
-   'force_https' => Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
+   'force_https' => \Benjaber98\LaravelHttps\Middlewares\ForceHttpMiddleware::class,
 ];
 
 ```
