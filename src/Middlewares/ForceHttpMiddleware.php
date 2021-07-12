@@ -17,6 +17,10 @@ class ForceHttpMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(app()->environment() == 'testing') {
+            return $next($request);
+        }
+
         if(app()->environment() == 'local' && ! config('https.force_in_local')) {
             return $next($request);
         }
