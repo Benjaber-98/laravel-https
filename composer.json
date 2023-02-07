@@ -47,10 +47,7 @@
         "laravel": {
             "providers": [
                 "Benjaber98\\LaravelHttps\\LaravelHttpsServiceProvider"
-            ],
-            "aliases": {
-                "LaravelHttps": "Benjaber98\\LaravelHttps\\LaravelHttpsFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
